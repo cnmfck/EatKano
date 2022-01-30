@@ -224,7 +224,7 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
     }
 
     function SubmitResults() {
-        let system = "其他操作系统";
+        let system = "其他high系统";
         let area = "异世界";
         if ($("#username").val() && _gameSettingNum === 20) {
             const systems = [
@@ -383,7 +383,7 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
     }
 
     function getBestScore(score) {
-        // 练习模式不会进入算分界面
+        // 练high模式不会进入算分界面
         let cookieName = (mode === MODE_NORMAL ? 'bast-score' : 'endless-best-score');
         let best = cookie(cookieName) ? Math.max(parseFloat(cookie(cookieName)), score) : score;
         cookie(cookieName, best.toFixed(2), 100);
@@ -441,11 +441,11 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
             SubmitResults();
         }
 
-        if (cps <= 5) return '试着好好练一下？';
-        if (cps <= 8) return 'TCL';
-        if (cps <= 10)  return 'TQL';
-        if (cps <= 15) return '您';
-        return '人？';
+        if (cps <= 5) return 'high不起来...';
+        if (cps <= 8) return '力量还是不够..';
+        if (cps <= 10)  return '力量在不断涌上来！';
+        if (cps <= 15) return '屎蛋都怕我！！';
+        return '我要超越人类！';
     }
 
     function toStr(obj) {
